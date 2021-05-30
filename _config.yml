@@ -1,1 +1,5 @@
 theme: jekyll-theme-hacker
+layout: page
+title: Anytime Automatic Algorithm Selection for Graph Coloring
+tagline: Graph Coloring, Anytime Algorithm Selection
+description: Page describing how to use the data associated with the Anytime Automatic Algorithm Selection for Graph Coloring job.
