@@ -12,9 +12,9 @@ by the solver [Head](https://hal.archives-ouvertes.fr/hal-00925911/document), so
 
 Here are the links to download the data generated and used for the development of the work.
 
-* [Graph Coloring instances](https://drive.google.com/file/d/1TloL47siY5cHSEq8Bb9t7DgUVaUq3tiA/view?usp=sharing) This zip file contains 6379 in DIMACS format [reference] (http://prolland.free.fr/works/research/dsat/dimacs.html).
+* [Graph Coloring instances](https://drive.google.com/file/d/1TloL47siY5cHSEq8Bb9t7DgUVaUq3tiA/view?usp=sharing): This zip file contains 6379 in DIMACS format [reference] (http://prolland.free.fr/works/research/dsat/dimacs.html).
 * [Features](https://drive.google.com/file/d/1sKfCg24mcJPPhu5IAcGDfCizBVClULG-/view?usp=sharing): This file contains 6379 instances with 82 features calculated.
-* [Solver results](https://drive.google.com/file/d/143Ekm588NObz0f-6FK0q5l1z8LLRQe28/view?usp=sharing) 
+* [Solver results](https://drive.google.com/file/d/143Ekm588NObz0f-6FK0q5l1z8LLRQe28/view?usp=sharing): This file contains the results of the solver execution. The times are in milliseconds.
 
 ### How to load the data
 
