@@ -1,9 +1,18 @@
-
 # Anytime Automatic Algorithm Selection for Graph Coloring
+
+In this paper, we deal with the problem of algorithm selection, as we did in [knapsack paper] (https://www.sciencedirect.com/science/article/abs/pii/S0957417420304371).
+The work consists in selecting the solver that obtains the best solution in a given time, for this we use characteristics calculated from the instances and the times in which solutions are obtained from the execution of solvers with the instances. 
+which solutions are obtained from the execution of solvers with the instances.
+Here, unlike the previous work, we focus on the graph coloring problem, where, unlike knapsack, we encounter a scenario strongly dominated by the solver [Head] (Head]).
+by the solver [Head] (https://hal.archives-ouvertes.fr/hal-00925911/document), so we present a strategy to deal with imbalanced scenarios.
+
+
 
 
 
 ### Dataset
+
+Here are the links to download the data generated and used for the development of the work.
 
 * [Graph Coloring instances](https://drive.google.com/file/d/1TloL47siY5cHSEq8Bb9t7DgUVaUq3tiA/view?usp=sharing) This zip file contains 6379 in DIMACS format [reference] (http://prolland.free.fr/works/research/dsat/dimacs.html).
 * [Features](https://drive.google.com/file/d/1sKfCg24mcJPPhu5IAcGDfCizBVClULG-/view?usp=sharing): This file contains 6379 instances with 82 features calculated.
