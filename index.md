@@ -1,37 +1,46 @@
-## Welcome to GitHub Pages
 
-You can use the [editor on GitHub](https://github.com/DanielOrtega94/Anytime-graph-coloring/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+# Anytime Automatic Algorithm Selection for Graph Coloring
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-### Markdown
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+### Dataset
 
-```markdown
-Syntax highlighted code block
+* [Graph Coloring instances](https://drive.google.com/file/d/1TloL47siY5cHSEq8Bb9t7DgUVaUq3tiA/view?usp=sharing) This zip file contains 6379 in DIMACS format [reference] (http://prolland.free.fr/works/research/dsat/dimacs.html).
+* [Features](https://drive.google.com/file/d/1sKfCg24mcJPPhu5IAcGDfCizBVClULG-/view?usp=sharing): This file contains 6379 instances with 82 features calculated.
+* [Solver results](https://drive.google.com/file/d/143Ekm588NObz0f-6FK0q5l1z8LLRQe28/view?usp=sharing) 
 
-# Header 1
-## Header 2
-### Header 3
+### How to load the data
 
-- Bulleted
-- List
+to use the instances in python, we recommend using the networkx [networkx] (https://networkx.org/).
+```python
+def read_graph(filename):
+    archivo = open(filename,"r")
+    lista_arcos = []
+    for linea in archivo.readlines():
+        linea = linea.replace("   "," ").split(" ")
+        if("p" in linea[0]):
+            nodos,arcos = int(linea[2]),int(linea[3])
+        if("e" in linea[0]):
+            to,fro = int(linea[1])-1,int(linea[2].strip())-1
+            lista_arcos.append((to,fro))
+    lista_arcos_ = [(x,y) for (x,y) in lista_arcos]
+    return nodos,lista_arcos_
 
-1. Numbered
-2. List
+def create_graph(nodos,lista_arcos):
+    from networkx import Graph
+    G=Graph()
+    G.add_nodes_from(arange(1,nodos))
+    G.add_edges_from(lista_arcos)
+    return G
 
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+nodos,lista_arcos = read_graph("1-FullIns_3.col")
+G = create_graph(nodos,lista_arcos)
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+For Python, we recommend using pandas to open files:
+```python
 
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/DanielOrtega94/Anytime-graph-coloring/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+import pandas as pd
+features = pd.read_csv("features_gc.csv")
+solver_results = pd.read_csv("execution_times.csv")
+```
