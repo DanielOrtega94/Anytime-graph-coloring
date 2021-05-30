@@ -8,8 +8,6 @@ by the solver [Head](https://hal.archives-ouvertes.fr/hal-00925911/document), so
 
 
 
-
-
 ### Dataset
 
 Here are the links to download the data generated and used for the development of the work.
