@@ -11,10 +11,12 @@ Here, unlike the previous work, we focus on the graph coloring problem, with an 
 
 Dataset
 Here in after, we present the links to download the data generated and used for the development of this research:
+*[Graph Coloring solvers](https://drive.google.com/drive/folders/1hp6ziPwby5IpzlW_-ocjdWySfD40HKmt?usp=sharing): This folder contains all the modified solvers used for the realization of this work.
 
 * [Graph Coloring instances](https://drive.google.com/file/d/1TloL47siY5cHSEq8Bb9t7DgUVaUq3tiA/view?usp=sharing): This zip file contains 6380 in DIMACS format. [reference](http://prolland.free.fr/works/research/dsat/dimacs.html).
 * [Features](https://drive.google.com/file/d/1sKfCg24mcJPPhu5IAcGDfCizBVClULG-/view?usp=sharing): This file contains 6380 intances with 82 features calculated.
 * [Solver results](https://drive.google.com/file/d/143Ekm588NObz0f-6FK0q5l1z8LLRQe28/view?usp=sharing): This file contains the results of the solver execution. The times are reported in milliseconds.
+* [Data for regression](https://drive.google.com/drive/folders/1Wb_NnFJr4rxBrREA2yBic4SdRfDgOa3x?usp=sharing):this folder contains all the files with the values used to train the regression models by solver
 
 ### How to load the data
 To use the instances in python, we recommend using the networkx [networkx](https://networkx.org/).
